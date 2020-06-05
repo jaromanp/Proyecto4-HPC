@@ -34,7 +34,7 @@ int hallarCadena(int *act, int *ant, int **P, char *A, char *B, char *C, int m, 
         }
          
         int t,s;
-	
+	//Encontrar la secuencia comun mas larga
 	   #pragma omp parallel for private(t,s) schedule(static)
         for(int j=0;j<n+1;j++)
         {
@@ -42,7 +42,7 @@ int hallarCadena(int *act, int *ant, int **P, char *A, char *B, char *C, int m, 
             s= (0 - (ant[j] - (t*ant[P[c_i][j]-1]) ));
             act[j] = ((t^1)||(s^0))*(ant[j]) + (!((t^1)||(s^0)))*(ant[P[c_i][j]-1] + 1);
         }
-
+        //Actualizar las matrices
         #pragma omp parallel for schedule(static)
         for(int j=0;j<n+1;j++){
             ant[j] = act[j];
@@ -52,11 +52,12 @@ int hallarCadena(int *act, int *ant, int **P, char *A, char *B, char *C, int m, 
         
 
     }
-        #pragma omp parallel for 
-        for(int a=1;a<n;a++){
+        
+}//Imprimir resultados
+    #pragma omp parallel for 
+    for(int a=1;a<n;a++){
 	if(act[a]>act[a-1]){
 	printf("%c",(char)B[a]);
-}
            
         }
     return act[n];
