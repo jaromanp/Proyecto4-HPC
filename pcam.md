@@ -19,8 +19,8 @@ inicialmente los datos a procesar se leerán del archivo y se almacenarán en di
 ![enter image description here](https://raw.githubusercontent.com/jaromanp/Proyecto4-HPC/master/Images/Diagrama%20en%20blanco%20%281%29.png)
 
 3. Aglomeración. Dado que desde un principio se tuvo en cuenta la paralelizacion al momento de implementar el secuencial los procesos y metodos fueron distribuidos de manera que la ejecucion fuera optima y los costos tanto de comunicacion como de sinconizacion fueran minimos por lo que en esta sección no es necesario realizar cambios importantes.
-- Tareas Seriales: T1, T2, T7
-- Tareas paralelas (OMP): T2, T4, T5, T6
+- Tareas Seriales: T1, T2, T3, T7
+- Tareas paralelas (OMP): T4, T5, T6
 
  
 4. Mapeo. Las tareas correspondientes a : actualizar matrices, contar la secuencia mas larga y contar el numero de ocurrencias por letra dentro de la cadena c. se asignaran a procesadores diferentes de manera que se puedan ejecutar en paralelo cuando sea pertinente. de estas, cada tarea es asignada a un procesador de tal modo que intente satisfacer las metas de competencia al maximizar la utilización del procesador y minimizar los costos de comunicación. 
