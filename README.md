@@ -14,3 +14,5 @@ tamano de la secuencia comun mas larga
 tiempo total
 
 el speedUp obtenindo en esta implementación fué: 50.070000/26.611313= 1.9 aproximadamente, lo que indica que el algoritmo paralelizado es más eficiente que el secuencial. entre mas grande la entrada mas se notará el cambio.
+
+Link del drive: https://drive.google.com/drive/folders/1nrIzq5KtM4nba3IQXlD0b2vUQ-wmqLFv?usp=sharing
