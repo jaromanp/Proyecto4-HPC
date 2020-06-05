@@ -16,3 +16,5 @@ tiempo total
 el speedUp obtenindo en esta implementación fué: 50.070000/26.611313= 1.9 aproximadamente, lo que indica que el algoritmo paralelizado es más eficiente que el secuencial. entre mas grande la entrada mas se notará el cambio.
 
 Link del drive: https://drive.google.com/drive/folders/1nrIzq5KtM4nba3IQXlD0b2vUQ-wmqLFv?usp=sharing
+
+Dado que este proyecto se define como fuertemente acoplado, al aplicar el MPI no se obtienen resultados óptimos por su funcionamiento y por la definición de este. Es por esta razón que no se adjuntó en este trabajo la sección relacionada con MPI, pues al hallar el speedUp no arrojaría los resultados esperados.
