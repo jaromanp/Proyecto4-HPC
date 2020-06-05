@@ -24,7 +24,7 @@ int hallarCadena(int *act, int *ant, int **P, char *A, char *B, char *C, int m, 
     
     for(int i=1;i<m+1;i++)
     {
-        #pragma omp parallel for 
+         
         for(int j=0;j<u;j++)
         {
             if(C[j]== A[i-1])
@@ -34,7 +34,7 @@ int hallarCadena(int *act, int *ant, int **P, char *A, char *B, char *C, int m, 
         }
          
         int t,s;
-	//Encontrar la secuencia comun mas larga
+        //Encontrar cadena comun mas larga
 	   #pragma omp parallel for private(t,s) schedule(static)
         for(int j=0;j<n+1;j++)
         {
@@ -42,30 +42,28 @@ int hallarCadena(int *act, int *ant, int **P, char *A, char *B, char *C, int m, 
             s= (0 - (ant[j] - (t*ant[P[c_i][j]-1]) ));
             act[j] = ((t^1)||(s^0))*(ant[j]) + (!((t^1)||(s^0)))*(ant[P[c_i][j]-1] + 1);
         }
-        //Actualizar las matrices
+        //actualizar matrices
         #pragma omp parallel for schedule(static)
         for(int j=0;j<n+1;j++){
             ant[j] = act[j];
         }
 
-        
-        
+              
 
-    }
-        
-}//Imprimir resultados
-    #pragma omp parallel for 
+    }        
+         
     for(int a=1;a<n;a++){
 	if(act[a]>act[a-1]){
 	printf("%c",(char)B[a]);
-           
+	}   
         }
+	
     return act[n];
 }
 
 int main(int argc, char *argv[])
 {
-    omp_set_num_threads(4);
+    omp_set_num_threads(6);
 
     if(argc <= 1){
         printf("Debe especificar un archivo\n");
@@ -107,7 +105,7 @@ int main(int argc, char *argv[])
     inicio = omp_get_wtime();
 
     //contar el numero de ocurrencias por letra en la cadena 2
-    #pragma omp parallel for
+    
     for(int t=0;t<numLetras;t++)
     {   
         #pragma omp parallel for
