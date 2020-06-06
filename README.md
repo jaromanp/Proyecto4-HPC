@@ -20,6 +20,6 @@ Link del drive: https://drive.google.com/drive/folders/1nrIzq5KtM4nba3IQXlD0b2vU
 Dado que este proyecto se define como fuertemente acoplado, al aplicar el MPI no se obtienen resultados óptimos por su funcionamiento y por la definición de este. Es por esta razón que no se adjuntó en este trabajo la sección relacionada con MPI, pues al hallar el speedUp no arrojaría los resultados esperados.
 
 ### Links Videos
-- Manuela Valencia Toro https://web.microsoftstream.com/video/b5b524c4-79db-4f37-a3e7-70970745859e
+- [Manuela Valencia Toro]( https://web.microsoftstream.com/video/b5b524c4-79db-4f37-a3e7-70970745859e)
 - Andres Sanchez Castrillo
 - [Jose Alejandro Roman Patiño](https://web.microsoftstream.com/video/931cdfb2-6f9a-4171-bf0a-2733cef82bdc)
