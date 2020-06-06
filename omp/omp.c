@@ -105,10 +105,10 @@ int main(int argc, char *argv[])
     inicio = omp_get_wtime();
 
     //contar el numero de ocurrencias por letra en la cadena 2
-    
+    #pragma omp parallel for
     for(int t=0;t<numLetras;t++)
     {   
-        #pragma omp parallel for
+        
         for(int j=1;j<tamanoCadena2+1;j++)
         {
             if(cadena2[j-1]==letras[t])
