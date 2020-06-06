@@ -22,4 +22,4 @@ Dado que este proyecto se define como fuertemente acoplado, al aplicar el MPI no
 ### Links Videos
 - [Manuela Valencia Toro]( https://web.microsoftstream.com/video/b5b524c4-79db-4f37-a3e7-70970745859e)
 - Andres Sanchez Castrillo
-- [Jose Alejandro Roman Patiño](https://web.microsoftstream.com/video/931cdfb2-6f9a-4171-bf0a-2733cef82bdc)
+- [Jose Alejandro Roman Patiño](https://web.microsoftstream.com/video/931cdfb2-6f9a-4171-bf0a-2733cef82bdc) (Por vencimiento de la cuenta inicial del cluster se tiene un nuevo usuario para acceso al cluster u44110@c008, las claves de acceso a esta fueron puestas en la carpeta del mooc HPC)
